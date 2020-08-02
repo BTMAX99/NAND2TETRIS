@@ -1,0 +1,10 @@
+CHIP onebs
+{
+IN l,sh,a,b,c,d;
+OUT q;
+PARTS:
+MUX4(a=a,b=b,c=c,d=d,sel1=sh,sel2=l,out=c1);
+DFF(in=c1,out=q);
+
+
+}

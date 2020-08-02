@@ -1,0 +1,7 @@
+CHIP bitadder7
+{
+IN a[7],b[7],cin;
+OUT c[7],cout;
+PARTS:
+bitadder8(a[1..7]=a,a[0]=false,b[1..7]=b,b[0]=false,cin=cin,sum[1..7]=c,sum[0]=c1,cout=cout);
+}

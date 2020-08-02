@@ -1,0 +1,14 @@
+CHIP sixtythree
+{
+IN a;
+OUT b[8];
+PARTS:
+Or(a=a,b=true,out=b[0]);
+Or(a=a,b=true,out=b[1]);
+Or(a=a,b=true,out=b[2]);
+Or(a=a,b=true,out=b[3]);
+Or(a=a,b=true,out=b[4]);
+Or(a=a,b=true,out=b[5]);
+Or(a=a,b=true,out=b[6]);
+Or(a=a,b=false,out=b[7]);
+}

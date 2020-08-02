@@ -1,0 +1,52 @@
+
+CHIP  cla
+{
+    IN a[4] , b[4] , cin;
+    OUT  s[4],cout;
+
+    PARTS:
+    // Put your code here:
+    Xor(a=a[0],b=b[0],out=P0);
+    And(a=a[0],b=b[0],out=G0);
+
+   Xor(a=a[1],b=b[1],out=P1);
+   And(a=a[1],b=b[1],out=G1);
+
+  Xor(a=a[2],b=b[2],out=P2);
+    And(a=a[2],b=b[2],out=G2);
+
+  Xor(a=a[3],b=b[3],out=P3);
+   And(a=a[3],b=b[3],out=G3);
+   
+    Xor(a=P0,b=cin,out=s[0]);
+
+    And(a=P0,b=cin,out=temp0);
+    Or(a=temp0,b=G0,out=C1);
+    Xor(a=P1,b=C1,out=s[1]);
+ 
+   
+    And(a=P0,b=cin,out=temp1);
+    Or(a=temp1,b=G0,out=temp2);
+    And(a=temp2,b=P1,out=temp3);
+    Or(a=G1,b=temp3,out=C2);
+    Xor(a=P2,b=C2,out=s[2]);
+
+    
+    And(a=P0,b=cin,out=temp4);
+    Or(a=temp4,b=G0,out=temp5);
+    And(a=temp5,b=P1,out=temp6);
+    Or(a=G1,b=temp6,out=temp7);
+    And(a=P2,b=temp7,out=temp8);
+    Or(a=temp8,b=G2,out=C3);
+    Xor(a=P3,b=C3,out=s[3]);
+    
+    And(a=P0,b=cin,out=temp9);
+    Or(a=G0,b=temp9,out=temp10);
+    And(a=temp10,b=P1,out=temp11);
+    Or(a=temp11,b=G1,out=temp12);
+    And(a=temp12,b=P2,out=temp13);
+    Or(a=temp13,b=G2,out=temp14);
+    And(a=temp14,b=P3,out=temp15);
+    Or(a=temp15,b=G3,out=cout);
+     
+}

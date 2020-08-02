@@ -1,0 +1,16 @@
+CHIP reg
+{
+IN D[8],l,sh,sl,sr;
+OUT Q[8];
+PARTS:
+onebs(a=Q7,b=sl,c=D[7],d=Q6,l=l,sh=sh,q=Q7,q=Q[7]);
+onebs(a=Q6,b=Q7,c=D[6],d=Q5,l=l,sh=sh,q=Q6,q=Q[6]);
+onebs(a=Q5,b=Q6,c=D[5],d=Q4,l=l,sh=sh,q=Q5,q=Q[5]);
+onebs(a=Q4,b=Q5,c=D[4],d=Q3,l=l,sh=sh,q=Q4,q=Q[4]);
+onebs(a=Q3,b=Q4,c=D[3],d=Q2,l=l,sh=sh,q=Q3,q=Q[3]);
+onebs(a=Q2,b=Q3,c=D[2],d=Q1,l=l,sh=sh,q=Q2,q=Q[2]);
+onebs(a=Q1,b=Q2,c=D[1],d=Q0,l=l,sh=sh,q=Q1,q=Q[1]);
+onebs(a=Q0,b=Q1,c=D[0],d=sr,l=l,sh=sh,q=Q0,q=Q[0]);
+
+
+}

@@ -1,0 +1,9 @@
+CHIP Mux16to1
+{
+IN  a0[16],a1[16],a2[16],a3[16],a4[16],a5[16],a6[16],a7[16],a8[16],a9[16],a10[16],a11[16],a12[16],a13[16],a14[16],a15[16],sel1,sel2,sel3,sel4;
+OUT  b[16];
+PARTS:
+Mux8to1(a0=a0,a1=a1,a2=a2,a3=a3,a4=a4,a5=a5,a6=a6,a7=a7,sel1=sel4,sel2=sel2,sel3=sel3,b=c1);
+Mux8to1(a0=a8,a1=a9,a2=a10,a3=a11,a4=a12,a5=a13,a6=a14,a7=a15,sel1=sel4,sel2=sel2,sel3=sel3,b=c2);
+Mux16(a=c1,b=c2,sel=sel1,out=b);
+}

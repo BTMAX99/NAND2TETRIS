@@ -1,0 +1,11 @@
+CHIP 16bitadder
+{
+	IN a[16], b[16], cin;
+        OUT s[16], cout;
+        PARTS:
+        cla(a[0]=a[0],a[1]=a[1],a[2]=a[2],a[3]=a[3],cin=cin,s[0]=sum[0],s[1]=sum[1],s[2]=sum[2],s[3]=sum[3],cout=x1);
+        cla(a[4]=a[4],a[5]=a[5],a[6]=a[6],a[7]=a[7],cin=x1,s[4]=sum[4],s[5]=sum[5],s[6]=sum[6],s[7]=sum[7],cout=x2);
+	cla(a[8]=a[8],a[9]=a[9],a[10]=a[10],a[11]=a[11],cin=x2,s[8]=sum[8],s[9]=sum[9],s[10]=sum[10],s[11]=sum[11],cout=x3);
+	cla(a[12]=a[12],a[13]=a[13],a[14]=a[14],a[15]=a[15],cin=x3,s[12]=sum[12],s[13]=sum[13],s[14]=sum[14],s[15]=sum[15],cout=x4);
+	   	
+}

@@ -1,0 +1,51 @@
+CHIP multiplier
+{
+	IN a[8],b,c,d;
+	OUT p[16];
+	PARTS:
+	And(a=a[0],b=b,out=p[0]);
+	And(a=a[1],b=b,out=p[1]);
+	And(a=a[2],b=b,out=p[2]);
+	And(a=a[3],b=b,out=p[3]);
+	And(a=a[4],b=b,out=p[4]);
+	And(a=a[5],b=b,out=p[5]);
+	And(a=a[6],b=b,out=p[6]);
+	And(a=a[7],b=b,out=p[7]);
+        And(a=c,b=d,out=p[8]);
+	And(a=c,b=d,out=p[9]);
+	And(a=c,b=d,out=p[10]);
+	And(a=c,b=d,out=p[11]);
+	And(a=c,b=d,out=p[12]);
+	And(a=c,b=d,out=p[13]);
+	And(a=c,b=d,out=p[14]);
+	And(a=c,b=d,out=p[15]);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

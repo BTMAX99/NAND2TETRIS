@@ -1,0 +1,12 @@
+CHIP FLOATING
+{
+IN A[16],B[16];
+OUT c[16];
+PARTS: 
+Multiplier16
+(q[0..6]=A[0..6],q[7]=true,m[0..6]=B[0..6],m[7]=true,out[8..15]=c[7..14]);
+Xor(a=A[15],b=B[15],out=c[15]);
+bitadder(a=A[7..14],b=B[7..14],cin=false,c=e1,cout=e2);
+sixtythree(a=false,b=e3);
+bitadder(a=e1,b=e3,cin=true,c=c[8..14],cout=e4);
+}

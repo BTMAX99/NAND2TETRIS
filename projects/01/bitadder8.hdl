@@ -1,0 +1,18 @@
+CHIP bitadder8
+{
+	IN a[8], b[8], cin;
+        OUT sum[8], cout;
+        PARTS:
+	Xor(a=b[0],b=cin,out=x0);
+	Xor(a=b[1],b=cin,out=x1);
+	Xor(a=b[2],b=cin,out=x2);
+	Xor(a=b[3],b=cin,out=x3);
+	Xor(a=b[4],b=cin,out=x4);
+	Xor(a=b[5],b=cin,out=x5);
+	Xor(a=b[6],b=cin,out=x6);
+	Xor(a=b[7],b=cin,out=x7);
+
+        cla(a[0]=a[0], a[1]=a[1], a[2]=a[2], a[3]=a[3], b[0]=x0, b[1]=x1, b[2]=x2, b[3]=x3, cin=cin,s[0]=sum[0], s[1]=sum[1], s[2]=sum[2], s[3]=sum[3], cout=x);
+        cla(a[0]=a[4], a[1]=a[5], a[2]=a[6], a[3]=a[7], b[0]=x4, b[1]=x5, b[2]=x6, b[3]=x7, cin=x, s[0]=sum[4], s[1]=sum[5], s[2]=sum[6], s[3]=sum[7], cout=cout);
+	
+}

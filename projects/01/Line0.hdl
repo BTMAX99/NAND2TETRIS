@@ -1,0 +1,20 @@
+
+
+CHIP Line0
+	
+{
+
+IN m[8],q;
+	
+OUT out[16];
+
+	
+PARTS:
+
+		
+And8(a=m,b=q,out=out[0..7]);
+	
+And8(a=m,b=false,out=out[8..15]);
+
+
+}

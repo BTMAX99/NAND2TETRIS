@@ -1,0 +1,52 @@
+
+
+CHIP Multiplier16
+	
+{
+		
+IN q[8],m[8];
+
+	
+OUT out[16];
+		
+
+PARTS:
+		
+	Line0(q=q[0],m=m,out=line0);
+	
+	Line1(q=q[1],m=m,out=line1);
+	
+	Line2(q=q[2],m=m,out=line2);
+	
+	Line3(q=q[3],m=m,out=line3);
+		
+	Line4(q=q[4],m=m,out=line4);
+	
+	Line5(q=q[5],m=m,out=line5);
+
+	Line6(q=q[6],m=m,out=line6);
+	
+	Line7(q=q[7],m=m,out=line7);
+		
+
+
+	Add16(a=line0,b=line1,out=r1);
+	
+	Add16(a=line2,b=line3,out=r2);
+	
+	Add16(a=line4,b=line5,out=r3);
+	
+	Add16(a=line6,b=line7,out=r4);
+	
+	Add16(a=r1,b=r2,out=r5);
+	
+	Add16(a=r3,b=r4,out=r6);
+	
+	Add16(a=r5,b=r6,out=out);
+	
+	
+	
+
+}
+
+

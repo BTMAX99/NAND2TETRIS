@@ -1,0 +1,36 @@
+/**
+ * Not gate:
+ * out = not in
+ */
+CHIP  4bitAdder{
+    IN a[4] , b[4],cin[4];
+    OUT cout[4], sum[4];
+
+    PARTS:
+    // Put your code here:
+    Xor(a=a[0],b=b[0],out=A0);
+    Xor(a=A0,b=cin[0],out=sum[0]);
+    Or(a=a[0],b=b[0],out=A1);
+    And(a=A1,b=cin[0],out=A2);
+    And(a=a,b=b,out=A3);
+    Or(a=A2,b=A3,out=cout[0]);
+        Xor(a=a[1],b=b[1],out=B0);
+    Xor(a=B0,b=cin[1],out=sum[1]);
+    Or(a=a[1],b=b[1],out=B1);
+    And(a=B1,b=cin[1],out=B2);
+    And(a=a,b=b,out=B3);
+    Or(a=B2,b=B3,out=cout[1]);
+       Xor(a=a[2],b=b[2],out=C0);
+    Xor(a=C0,b=cin[2],out=sum[2]);
+    Or(a=a[2],b=b[2],out=C1);
+    And(a=C1,b=cin[2],out=C2);
+    And(a=a,b=b,out=C3);
+    Or(a=C2,b=C3,out=cout[2]);
+        Xor(a=a[3],b=b[3],out=D0);
+    Xor(a=D0,b=cin[3],out=sum[3]);
+    Or(a=a[3],b=b[3],out=D1);
+    And(a=B1,b=cin[3],out=D2);
+    And(a=a,b=b,out=D3);
+    Or(a=D2,b=D3,out=cout[3]);
+    
+}

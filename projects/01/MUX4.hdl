@@ -1,0 +1,10 @@
+CHIP MUX4
+{
+IN a,b,c,d,sel1,sel2;
+OUT out;
+PARTS:
+
+Mux(a=a,b=b,sel=sel1,out=c1);
+Mux(a=c,b=d,sel=sel1,out=c2);
+Mux(a=c1,b=c2,sel=sel2,out=out);
+}

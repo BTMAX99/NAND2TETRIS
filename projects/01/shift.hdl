@@ -1,0 +1,22 @@
+CHIP shift{
+        IN a[16],c,d;
+        OUT b[16];
+       
+        PARTS:
+And(a=c,b=a[0],out=b[0]);
+           And(a=d,b=a[0],out=b[1]);
+And(a=d,b=a[1],out=b[2]);
+And(a=d,b=a[2],out=b[3]);
+And(a=d,b=a[3],out=b[4]);
+And(a=d,b=a[4],out=b[5]);
+And(a=d,b=a[5],out=b[6]);
+And(a=d,b=a[6],out=b[7]);
+And(a=d,b=a[7],out=b[8]);
+And(a=d,b=a[8],out=b[9]);
+And(a=d,b=a[9],out=b[10]);
+And(a=d,b=a[10],out=b[11]);
+And(a=d,b=a[11],out=b[12]);
+And(a=d,b=a[12],out=b[13]);
+And(a=d,b=a[13],out=b[14]);
+And(a=d,b=a[14],out=b[15]);
+}

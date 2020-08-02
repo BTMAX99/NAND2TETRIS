@@ -1,0 +1,25 @@
+CHIP ALU
+{
+IN A[16],B[16],c1,c2,c3,c4,;
+OUT out[16];
+PARTS:
+And16(a=A,b=B,out=out0);
+Or16(a=A,b=B,out=out1);
+Not16(in=A,out=out2);
+Not16(in=B,out=out3);
+Xor16(A=A,B=B,c=out4);
+bitadder(a=A,b=B,cin=false,sum=out5,cout=cout1);
+bitadder(a=A,b=B,cin=true,sum=out6,cout=cout2);
+bitadder(a=B,b=A,cin=true,sum=out7,cout=cout9);
+Multiplier16
+(q=A[0..7],m=B[0..7],out=out8);
+SL(a=A,b=out9);
+SL(a=B,b=out10);
+SR(a=A,b=out11);
+SR(a=B,b=out12);
+//FLOATING(A=A,B=B,c=out13);
+Xor16(A=A,B=A,c=out14);
+Xor16(A=A,B=A,c=out15);
+Mux16to1(a0=out0,a1=out1,a2=out2,a3=out3,a4=out4,a5=out5,a6=out6,a7=out7,a8=out8,a9=out9,a10=out10,a11=out11,a12=out12,a13=false,a14=out14,a15=out15,sel1=c1,sel2=c2,sel3=c3,sel4=c4,b=out);
+
+}

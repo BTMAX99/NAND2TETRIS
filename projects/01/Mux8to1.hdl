@@ -1,0 +1,11 @@
+CHIP Mux8to1
+{
+IN  a0[16],a1[16],a2[16],a3[16],a4[16],a5[16],a6[16],a7[16],sel1,sel2,sel3;
+OUT  b[16];
+PARTS:
+
+MUX4to1(a=a0,b=a1,c=a2,d=a3,sel1=sel1,sel2=sel2,out=c1);
+MUX4to1(a=a4,b=a5,c=a6,d=a7,sel1=sel1,sel2=sel2,out=c2);
+Mux16(a=c1,b=c2,sel=sel3,out=b);
+
+}

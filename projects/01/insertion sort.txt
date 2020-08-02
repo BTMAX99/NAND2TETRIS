@@ -1,0 +1,26 @@
+for (index1 = 1 ; index1 <= size_of_array - 1; index1++) 
+            {
+             index2 = index1;        
+            while ( index2 > 0 ) 
+            { 
+                if(LeaderBoard[index2].getWickets()>LeaderBoard[index2-1].getWickets())
+                {
+                    temp  = LeaderBoard[index2];
+                    LeaderBoard[index2]   = LeaderBoard[index2-1];
+                    LeaderBoard[index2-1] = temp;        
+                    
+                }
+                if(LeaderBoard[index2].getWickets()==LeaderBoard[index2-1].getWickets()&&LeaderBoard[index2].getID()<LeaderBoard[index2-1].getID() )
+                
+                {
+                    
+                    {
+                        temp  = LeaderBoard[index2];
+                        LeaderBoard[index2]   = LeaderBoard[index2-1];
+                        LeaderBoard[index2-1] = temp;        
+                    }
+                }
+                index2--;
+            }
+            }
+        }
