@@ -39,9 +39,13 @@ Copy-paste install for BASH shell on Debian/Ubuntu-based
 
 $ sudo apt-get install -y openjdk
 $ cd ~/Desktop
+
 $ git clone https://github.com/saltycraig/nand2tetris.git
+
 $ cd nand2tetris && unzip nand2tetris.zip
+
 $ cd nand2tetris/tools && chmod +x *.sh
+
 $ ./HardwareSimulator.sh
 
   
